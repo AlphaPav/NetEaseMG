@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\CameraFollowHero.cs" />
      <Compile Include="Assets\Scripts\DoubleJump.cs" />
      <Compile Include="Assets\Scripts\FollowHero.cs" />
+     <Compile Include="Assets\Scripts\HeroQEMode.cs" />
      <Compile Include="Assets\Scripts\Spring.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
