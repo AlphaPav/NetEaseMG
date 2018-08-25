@@ -7,8 +7,6 @@ public class DoubleJump : MonoBehaviour {
 
 
 	float force = 250;
-	bool isJump = false;
-	bool isDoubleJump = false;
 	int JumpNum = 0;
 	Rigidbody rb;
 	void Start()
@@ -37,7 +35,7 @@ public class DoubleJump : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.collider.name == "Quad")//碰撞的是quad  
+		if (collision.collider.tag == "WalkableRood")//碰撞的是quad  
 		{
 
 			JumpNum = 0;

@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraFollowHero.cs" />
      <Compile Include="Assets\Scripts\DoubleJump.cs" />
      <Compile Include="Assets\Scripts\FollowHero.cs" />
+     <Compile Include="Assets\Scripts\Spring.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity2017/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

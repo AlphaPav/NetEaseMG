@@ -6,8 +6,8 @@ public class FollowHero : MonoBehaviour {
 	public GameObject[] follow;
 
 	GameObject boss;
-	public float xspeed = 1f;//move force
-	public float jumpSpeed = 500f;//jump force
+	public float xspeed = 2f;//move force
+	public float jumpSpeed = 700f;//jump force
 	Rigidbody rb;
 
 	Vector3 lastPos;
@@ -18,10 +18,6 @@ public class FollowHero : MonoBehaviour {
 
 	void Start()
 	{
-		/*follow[0] = GameObject.Find("cube1");
-		follow[1] = GameObject.Find("cube2");
-		follow[2] = GameObject.Find("cube3");
-		follow[3] = GameObject.Find("cube5");*/
 
 		offset = new Vector3[10][];
 		for (int i = 0; i < 6; i++)
