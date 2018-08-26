@@ -42,6 +42,9 @@ public class FollowHero : MonoBehaviour {
     //运动相关速度
 	public float xspeed = 3f;//move force
 	public float jumpSpeed = 600f;//jump force
+
+    public GameObject SubHero;
+
 	Rigidbody rb;
 
     //上次位置
@@ -155,8 +158,9 @@ public class FollowHero : MonoBehaviour {
             if(follow[i] == null)
             {
                 //新建物体
-                GameObject follower = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-                
+                GameObject follower = Instantiate(SubHero);
+                follower.SetActive(true);
+
                 //生成孩子的大小，随机大小  0.45 -- 0.65
                 Vector3 MyScale = transform.lossyScale * Random.Range(0.4f, 0.7f);
                 follower.transform.localScale = MyScale;
@@ -178,9 +182,8 @@ public class FollowHero : MonoBehaviour {
                 MyOffset = MyOffset - new Vector3(0, transform.lossyScale[1] - follower.transform.lossyScale[1], 0);
                 follower.transform.position = MyOffset;
 
+                follower.tag = "Untagged";
                 follow[i] = follower;
-                follow[i].AddComponent<Rigidbody>();
-                follow[i].GetComponent<Rigidbody>().freezeRotation = true;
             }
         }
 
@@ -205,14 +208,15 @@ public class FollowHero : MonoBehaviour {
 		if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.Translate(new Vector3(1,0,0) * xspeed * Time.deltaTime, Space.World);
-            if(Global.HeroState == Global.Distributed)
+            if (Global.HeroState == Global.Distributed)
             {
-                for(int i = 1; i < Global.HeroBlood; i++)
+                for (int i = 1; i < Global.HeroBlood; i++)
                 {
-                    follow[i].transform.Translate(new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
+                    Debug.Log(i);
+                    follow[i].transform.Translate(new Vector3(1, 0, 0) * xspeed * Time.deltaTime);
                 }
             }
-		}
+        }
 		if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.Translate(-1 * new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
