@@ -10,7 +10,7 @@ public class trigger3 : MonoBehaviour {
 		cube = this.gameObject;
 		if (cube == null)
 			Debug.Log ("cube=null");
-		Debug.Log (Global.HeroResistance);
+		//Debug.Log (Global.HeroResistanceA);
 	}
 	
 	// Update is called once per frame
@@ -23,8 +23,8 @@ public class trigger3 : MonoBehaviour {
 		{
 			
 			if (isused == false) {
-				Global.HeroResistance++;
-				Debug.Log (Global.HeroResistance);
+				Global.HeroResistanceA++;
+				//Debug.Log (Global.HeroResistanceA);
 				isused = true;
 				cube.active = false;
 			}
