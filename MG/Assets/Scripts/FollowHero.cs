@@ -24,6 +24,7 @@ public class Global{
     public static int HeroState = Total;
 
     public static bool isCameraFollowHero= true;
+    public static bool isCameraShaking = false;
 
     //抗药性
     public static int HeroResistanceA = 0;  // A类抗药性
