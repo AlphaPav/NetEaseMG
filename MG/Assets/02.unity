@@ -927,7 +927,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651461838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.43, y: 2.89, z: -10}
+  m_LocalPosition: {x: 7.16, y: 2.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 1096586053}
   m_Layer: 0
   m_Name: Cube (39)
-  m_TagString: WalkableRood
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2681,6 +2681,7 @@ GameObject:
   - component: {fileID: 1532445127}
   - component: {fileID: 1532445126}
   - component: {fileID: 1532445125}
+  - component: {fileID: 1532445131}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -2696,8 +2697,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1532445123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.080003, y: 2.03, z: 0.06300086}
-  m_LocalScale: {x: 0.68138814, y: 0.68138814, z: 0.68138814}
+  m_LocalPosition: {x: 5.94, y: 1.7717, z: 0.06300086}
+  m_LocalScale: {x: 0.46134898, y: 0.42308128, z: 0.68138814}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2799,6 +2800,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1532445123}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1532445131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532445123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b749f75fcf0d344383470ab7f12d230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555588432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,7 +3316,7 @@ GameObject:
   - component: {fileID: 1807621318}
   m_Layer: 0
   m_Name: Cube (37)
-  m_TagString: WalkableRood
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
