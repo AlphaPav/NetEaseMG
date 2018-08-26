@@ -9,6 +9,7 @@ TagManager:
   - 01Move1
   - Cell
   - InfectedCell
+  - 01Move2
   layers:
   - Default
   - TransparentFX
