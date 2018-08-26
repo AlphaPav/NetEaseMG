@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoubleJump : MonoBehaviour {
-
-
-
 	float force = 250;
 	int JumpNum = 0;
 	Rigidbody rb;
