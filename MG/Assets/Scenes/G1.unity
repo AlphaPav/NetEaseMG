@@ -1813,7 +1813,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651461838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.55, y: 4.68, z: -10}
+  m_LocalPosition: {x: -7.85, y: 4.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2684,15 +2684,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.66
+      value: -7.4424
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.66
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2716,15 +2716,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 35.43879
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 35.438797
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 35.438797
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50eabc5aba6282b4e80717d9f90e5c5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2843,14 +2843,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977385525}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1eca1e419550374791a9e23b6d467c9, type: 3}
+  m_Script: {fileID: 11500000, guid: dee5a8e58bd21f247b9bf6ed0b0df11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xspeed: 3
   jumpSpeed: 600
-  SubHero: {fileID: 1659453858281386, guid: d00b588e7399f6340b2d319f293b273c, type: 2}
 --- !u!114 &977385527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3721,6 +3720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2deb5d0a1397840ba4a973bd87f6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 896607010}
 --- !u!1 &1188868963
 GameObject:
   m_ObjectHideFlags: 0

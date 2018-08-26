@@ -16,7 +16,7 @@ public class Global{
     public const int MaxHeroBlood = 15;
 
     //主角变量
-    public static int HeroBlood = 1;      	// 主角血量  决定后面的跟班个数
+    public static int HeroBlood = 1;        // 主角血量  决定后面的跟班个数
 
     public static int HeroType = A;     // 主角类型  A or B or C
 
@@ -41,22 +41,22 @@ public class FollowHero : MonoBehaviour {
     private GameObject[] follow;
     
     //运动相关速度
-	public float xspeed = 3f;//move force
-	public float jumpSpeed = 600f;//jump force
+    public float xspeed = 3f;//move force
+    public float jumpSpeed = 600f;//jump force
 
     public GameObject SubHero;
 
-	Rigidbody rb;
+    Rigidbody rb;
 
     //上次位置
-	Vector3 lastPos;
+    Vector3 lastPos;
 
     //延时10帧
     const int Pause = 10;
-	int Delay = Pause;
+    int Delay = Pause;
 
     //保存每个物体的接下来的运动
-	public Vector3[][] offset;
+    public Vector3[][] offset;
 
     //Shift 持续时间
     const int SetShiftPause = 40;
@@ -67,58 +67,58 @@ public class FollowHero : MonoBehaviour {
     int JumpNum = 0;
 
     void Start()
-	{
+    {
         //每个物体的连续每10帧动画 
-		offset = new Vector3[Global.MaxHeroBlood][];
+        offset = new Vector3[Global.MaxHeroBlood][];
 
         //初始化变量
         follow = new GameObject[Global.MaxHeroBlood];
-		for (int i = 0; i < Global.MaxHeroBlood; i++)
-		{
+        for (int i = 0; i < Global.MaxHeroBlood; i++)
+        {
             follow[i] = null;
-			offset[i] = new Vector3[Pause];
+            offset[i] = new Vector3[Pause];
 
-			for (int j = 0; j < Pause; j++)
-			{
-				offset[i][j] = new Vector3(0, 0, 0);
-			}
-		}
+            for (int j = 0; j < Pause; j++)
+            {
+                offset[i][j] = new Vector3(0, 0, 0);
+            }
+        }
 
         //获得刚体组件
-		rb = GetComponent<Rigidbody>();
-		lastPos = transform.position;
+        rb = GetComponent<Rigidbody>();
+        lastPos = transform.position;
 
         //设置全局变量
         Global.HeroBlood = 8;
         Global.HeroType = Global.A;
     }
-	void Update()
-	{
-		if (Global.isCameraFollowHero == true) {
-			Move ();
-		}
+    void Update()
+    {
+        if (Global.isCameraFollowHero == true) {
+            Move ();
+        }
         /*
         //延时10帧, 开始更新游戏对象的位置
-		if (Delay == 0)
-		{
-			for (int i = Global.HeroBlood - 1; i > 0; i--)
-			{
-				for (int j = 0; j < Pause; j++)
-				{
-					offset[i][j] = offset[i - 1][j];
-				}
-			}
-			offset[0] = new Vector3[10];
-			for (int j = 0; j < Pause; j++)
-			{
-				offset[0][j] = new Vector3(0, 0, 0);
-			}
-			Delay = Pause;
-		}
+        if (Delay == 0)
+        {
+            for (int i = Global.HeroBlood - 1; i > 0; i--)
+            {
+                for (int j = 0; j < Pause; j++)
+                {
+                    offset[i][j] = offset[i - 1][j];
+                }
+            }
+            offset[0] = new Vector3[10];
+            for (int j = 0; j < Pause; j++)
+            {
+                offset[0][j] = new Vector3(0, 0, 0);
+            }
+            Delay = Pause;
+        }
     
         // 更新最新的游戏位置
-		offset[0][Pause-Delay] = transform.position - lastPos;
-		lastPos = transform.position;
+        offset[0][Pause-Delay] = transform.position - lastPos;
+        lastPos = transform.position;
 
         if(Global.HeroState == Global.Distributed)
         {
@@ -133,7 +133,7 @@ public class FollowHero : MonoBehaviour {
         //延时--
         Delay--;
         */
-	}
+    }
 
     void ChangeToDis()
     {
@@ -203,12 +203,12 @@ public class FollowHero : MonoBehaviour {
     }
 
 
-	void Move()
-	{
+    void Move()
+    {  
         //AD移动
-		if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
-		{
-			transform.Translate(new Vector3(1,0,0) * xspeed * Time.deltaTime, Space.World);
+        if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(new Vector3(1,0,0) * xspeed * Time.deltaTime, Space.World);
             if (Global.HeroState == Global.Distributed)
             {
                 for (int i = 1; i < Global.HeroBlood; i++)
@@ -218,9 +218,9 @@ public class FollowHero : MonoBehaviour {
                 }
             }
         }
-		if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
-		{
-			transform.Translate(-1 * new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
+        if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(-1 * new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
             if (Global.HeroState == Global.Distributed)
             {
                 for (int i = 1; i < Global.HeroBlood; i++)
@@ -232,31 +232,20 @@ public class FollowHero : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.LeftShift)  || Input.GetKeyDown(KeyCode.RightShift))
         {
-            PauseTime++;
+           
+			if(Global.HeroState == Global.Distributed)
+			{
+				Global.HeroState = Global.Total;
+				MergeToTotal();
+			}
+			else
+			{
+				Global.HeroState = Global.Distributed;
+				ChangeToDis();
+			}
         }
-        else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            PauseTime++;
-            if(PauseTime >= SetShiftPause)
-            {
-                if(Global.HeroState == Global.Distributed)
-                {
-                    Global.HeroState = Global.Total;
-                    MergeToTotal();
-                }
-                else
-                {
-                    Global.HeroState = Global.Distributed;
-                    ChangeToDis();
-                }
-                PauseTime = 0;
-            }
-        }
-        else
-        {
-            PauseTime = 0;
-        }
-
+        
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
             JumpNum++;
@@ -275,9 +264,11 @@ public class FollowHero : MonoBehaviour {
             }
             else if (JumpNum == 2)
             {
-
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-                rb.AddForce(Vector3.up * force);
+                if (Global.HeroState == Global.Total) {
+                    rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                    rb.AddForce(Vector3.up * force);
+                }
+              /*
                 if (Global.HeroState == Global.Distributed)
                 {
                     for (int i = 1; i < Global.HeroBlood; i++)
@@ -286,7 +277,7 @@ public class FollowHero : MonoBehaviour {
                         subRB.velocity = new Vector3(subRB.velocity.x, 0, subRB.velocity.z);
                         subRB.AddForce(Vector3.up * force);
                     }
-                }
+                }*/
             }
         }
     }
