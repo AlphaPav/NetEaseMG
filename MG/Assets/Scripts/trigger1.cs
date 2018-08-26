@@ -19,7 +19,7 @@ public class trigger1 : MonoBehaviour {
 	Vector3 endPos;
 	Vector3 cameraendPos;
 	Vector3 camerabeginPos;
-	Vector3 offset = new Vector3(0,1.11f,0); 
+	Vector3 offset = new Vector3(0,1.0f,0); 
 	GameObject camera;
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class trigger1 : MonoBehaviour {
 			Debug.Log ("MainCamera null");
 		beginPos = cube.transform.position;
 		endPos = beginPos + offset;
-		camerabeginPos=camera.transform.position;
+
 		cameraendPos=camera.transform.position;
 		cameraendPos.x = 4.62f;
 		cameraendPos.y = 2.556f;
@@ -42,14 +42,14 @@ public class trigger1 : MonoBehaviour {
 		if (state == OFF) {
 			if (TomoveCamera == ON) {
 				if (cameraendPos != camera.transform.position) {
-					Debug.Log (cameraendPos - camera.transform.position);
+
 					camera.transform.Translate((cameraendPos - camera.transform.position) * cameraspeed * Time.deltaTime, Space.World);
 				}
 				float cameradiff = Vector3.Distance (cameraendPos, camera.transform.position);
 
 				if (cameradiff < 0.001f) {
 					camera.transform.Translate(cameraendPos - camera.transform.position, Space.World);
-					Debug.Log (TomoveCamera);
+		
 					TomoveCamera = OFF;
 					state = ON;
 				}
@@ -98,6 +98,7 @@ public class trigger1 : MonoBehaviour {
 			if (notused == true) {
 				TomoveCamera = ON;
 				Global.isCameraFollowHero = false;
+				camerabeginPos=camera.transform.position;
 				notused = false;
 			}
 		}
