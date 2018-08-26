@@ -186,6 +186,7 @@
      <Compile Include="Assets\rotation1.cs" />
      <Compile Include="Assets\Scripts\CameraFollowHero.cs" />
      <Compile Include="Assets\Scripts\DoubleJump.cs" />
+     <Compile Include="Assets\Scripts\FGUI\aboutWindow.cs" />
      <Compile Include="Assets\Scripts\FGUI\Init.cs" />
      <Compile Include="Assets\Scripts\FollowHero.cs" />
      <Compile Include="Assets\Scripts\HeroQEMode.cs" />
@@ -193,6 +194,7 @@
      <Compile Include="Assets\Scripts\OneJump.cs" />
      <Compile Include="Assets\Scripts\Spring.cs" />
      <Compile Include="Assets\Scripts\trigger1.cs" />
+     <Compile Include="Assets\Scripts\trigger2.cs" />
      <None Include="Assets\FairyGUI\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
