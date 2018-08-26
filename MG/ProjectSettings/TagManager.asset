@@ -6,6 +6,9 @@ TagManager:
   tags:
   - WalkableRood
   - Hero
+  - 01Move1
+  - Cell
+  - InfectedCell
   layers:
   - Default
   - TransparentFX

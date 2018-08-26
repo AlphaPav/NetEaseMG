@@ -13,7 +13,7 @@ public class rotation1 : MonoBehaviour {
 //	v1=new Vector3(0,0,2f);
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Q)) 
+		if (Input.GetKey(KeyCode.Q)) 
 		{
 			tr1.Rotate (Vector3.forward, 0.1f);
 		}
