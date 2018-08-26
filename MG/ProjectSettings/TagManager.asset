@@ -6,8 +6,12 @@ TagManager:
   tags:
   - WalkableRood
   - Hero
+<<<<<<< HEAD
   - Cell
   - InfectedCell
+=======
+  - 01Move1
+>>>>>>> b336ebec64895e9be38161acde64b5764e2be0ec
   layers:
   - Default
   - TransparentFX
