@@ -84,7 +84,6 @@
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
     <Compile Include="Assets\Scripts\FollowHero.cs" />
     <Compile Include="Assets\Scripts\HeroQEMode.cs" />
-    <Compile Include="Assets\Scripts\Infect.cs" />
     <Compile Include="Assets\Scripts\Spring.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

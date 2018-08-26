@@ -934,7 +934,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651461838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.16, y: 2.89, z: -10}
+  m_LocalPosition: {x: -6.43, y: 2.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2758,13 +2758,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1532445123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 5.94, y: 1.7717, z: 0.06300086}
-  m_LocalScale: {x: 0.46134898, y: 0.42308128, z: 0.68138814}
-=======
   m_LocalPosition: {x: -8.95, y: 1.47, z: 0}
   m_LocalScale: {x: 0.47221604, y: 0.47221616, z: 0.47221616}
->>>>>>> b336ebec64895e9be38161acde64b5764e2be0ec
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -3396,7 +3391,7 @@ GameObject:
   - component: {fileID: 1807621318}
   m_Layer: 0
   m_Name: Cube (37)
-  m_TagString: Cell
+  m_TagString: WalkableRood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
