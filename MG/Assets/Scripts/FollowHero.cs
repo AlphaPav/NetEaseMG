@@ -166,7 +166,7 @@ public class FollowHero : MonoBehaviour {
                 follower.transform.localScale = MyScale;
                 
                 //生成孩子的位置
-                Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(0.3f, 1.4f), Random.Range(0.6f, 1.7f));
+                Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(1.5f, 2.4f), Random.Range(0.6f, 1.7f));
                 
                 //决定是 1 or -1
                 float flagX = Random.Range(0f, 1f);
@@ -178,16 +178,16 @@ public class FollowHero : MonoBehaviour {
                 //判断是否是
                 MyOffset = new Vector3(flagX * MyOffset[0], MyOffset[1], MyOffset[2] * flagZ);
                 MyOffset = transform.position + MyOffset * Global.ChildRadius;
-
-                MyOffset = MyOffset - new Vector3(0, transform.lossyScale[1] - follower.transform.lossyScale[1], 0);
                 follower.transform.position = MyOffset;
 
                 follower.tag = "Untagged";
+                //follower.GetComponent<Rigidbody>().isKinematic = true;
                 follow[i] = follower;
             }
         }
 
         transform.localScale = 0.6f * transform.lossyScale;
+        transform.Translate(0, 0.5f, 0);
 
         //删除多余的孩子
         for (int i = Global.HeroBlood; i < Global.MaxHeroBlood; i++)
@@ -213,7 +213,7 @@ public class FollowHero : MonoBehaviour {
                 for (int i = 1; i < Global.HeroBlood; i++)
                 {
                     Debug.Log(i);
-                    follow[i].transform.Translate(new Vector3(1, 0, 0) * xspeed * Time.deltaTime);
+                    follow[i].transform.Translate(new Vector3(0, 0, 1) * xspeed * Time.deltaTime);
                 }
             }
         }
