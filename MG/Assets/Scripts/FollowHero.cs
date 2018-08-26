@@ -15,7 +15,7 @@ public class Global{
     public static int HeroBlood = 1;      	// 主角血量  决定后面的跟班个数
 
     public static int HeroType = A;	  	// 主角类型  A or B or C
-
+	public static bool isCameraFollowHero= true;
     //抗药性
     public static int HeroResistance = 0;  // 主角抗药性 0-100 百分比免伤
 
@@ -29,8 +29,8 @@ public class FollowHero : MonoBehaviour {
     private GameObject[] follow;
     
     //运动相关速度
-	public float xspeed = 2f;//move force
-	public float jumpSpeed = 700f;//jump force
+	public float xspeed = 3f;//move force
+	public float jumpSpeed = 600f;//jump force
 	Rigidbody rb;
 
     //上次位置
@@ -71,7 +71,9 @@ public class FollowHero : MonoBehaviour {
     }
 	void Update()
 	{
-		Move();
+		if (Global.isCameraFollowHero == true) {
+			Move ();
+		}
         SetFollowSubHero();
         
         //延时10帧, 开始更新游戏对象的位置
@@ -158,11 +160,11 @@ public class FollowHero : MonoBehaviour {
 	void Move()
 	{
         //AD移动
-		if (Input.GetKey(KeyCode.D))
+		if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.Translate(new Vector3(1,0,0) * xspeed * Time.deltaTime, Space.World);
 		}
-		if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.Translate(-1 * new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
 		}

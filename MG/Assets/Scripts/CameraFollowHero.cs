@@ -16,8 +16,12 @@ public class CameraFollowHero : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 delte = offset + hero.transform.position - transform.position;
-		transform.Translate(delte, Space.World);
+		if (Global.isCameraFollowHero == true) {
+			Vector3 delte = offset + hero.transform.position - transform.position;
+			transform.Translate (delte, Space.World);
+
+		}
+
 	
 	}
 }
