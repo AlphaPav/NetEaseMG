@@ -187,7 +187,7 @@ public class FollowHero : MonoBehaviour {
         }
 
         transform.localScale = 0.6f * transform.lossyScale;
-        transform.Translate(0, 0.5f, 0);
+        transform.Translate(0, 1.2f, 0);
 
         //删除多余的孩子
         for (int i = Global.HeroBlood; i < Global.MaxHeroBlood; i++)
@@ -213,7 +213,7 @@ public class FollowHero : MonoBehaviour {
                 for (int i = 1; i < Global.HeroBlood; i++)
                 {
                     Debug.Log(i);
-                    follow[i].transform.Translate(new Vector3(0, 0, 1) * xspeed * Time.deltaTime);
+                    follow[i].transform.Translate(new Vector3(1, 0, 0) * xspeed * Time.deltaTime, Space.World);
                 }
             }
         }
