@@ -16,7 +16,7 @@ public class DoubleJump : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyUp(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			JumpNum++;
 			if (JumpNum > 2) return;
