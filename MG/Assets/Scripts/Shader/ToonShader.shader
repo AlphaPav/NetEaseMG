@@ -136,7 +136,7 @@ Shader "Mini/Toon" {
 				float toonRim = floor(rim * _ToonRimStep);
 				rim = lerp(rim, toonRim, _RimEffect);
 
-				float4 albedoColor = tex2D(_Albedo, i.uv);
+				float4 albedoColor = tex2D(_Albedo, i.uv*_Albedo_ST.xy + _Albedo_ST.zw);
 				float noise = tex2D(_Noise,i.uv*_Noise_ST.xy + _Noise_ST.zw).r;
 				noise = 0.6*noise + 0.5;
 				#ifdef _Noise_On

@@ -420,11 +420,13 @@
     <Compile Include="Assets\FairyGUI\Scripts\Utils\ZipReader.cs" />
     <Compile Include="Assets\rotation1.cs" />
     <Compile Include="Assets\Scripts\CameraFollowHero.cs" />
+    <Compile Include="Assets\Scripts\ChildDying.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
     <Compile Include="Assets\Scripts\FGUI\aboutWindow.cs" />
     <Compile Include="Assets\Scripts\FGUI\Init.cs" />
     <Compile Include="Assets\Scripts\FGUI\main.cs" />
     <Compile Include="Assets\Scripts\FollowHero.cs" />
+    <Compile Include="Assets\Scripts\G1scripts\smallhero.cs" />
     <Compile Include="Assets\Scripts\G1scripts\trigger1.cs" />
     <Compile Include="Assets\Scripts\G1scripts\trigger2.cs" />
     <Compile Include="Assets\Scripts\G1scripts\trigger2out.cs" />
@@ -438,6 +440,7 @@
     <Compile Include="Assets\Scripts\G2scripts\G2trigger5.cs" />
     <Compile Include="Assets\Scripts\G2scripts\RotateAll.cs" />
     <Compile Include="Assets\Scripts\G2scripts\Rotatemyself.cs" />
+    <Compile Include="Assets\Scripts\HeroHurt.cs" />
     <Compile Include="Assets\Scripts\HeroQEMode.cs" />
     <Compile Include="Assets\Scripts\Infect.cs" />
     <Compile Include="Assets\Scripts\OneJump.cs" />

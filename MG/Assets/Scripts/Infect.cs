@@ -5,6 +5,7 @@ using UnityEngine;
 public class Infect : MonoBehaviour {
     private bool coll = false;
     private GameObject cell = null;
+    
     // Use this for initialization
     void Start() {
         coll = false;
@@ -18,9 +19,16 @@ public class Infect : MonoBehaviour {
             if (coll)
             {
                 cell.tag = "InfectedCell";
-                Material material = new Material(Shader.Find("Standard"));
-                material.color = Color.black;
-                cell.GetComponent<MeshRenderer>().material = material;
+                Global.HeroBlood++;
+                Material[] materials = cell.GetComponent<Renderer>().materials;
+                materials[0].SetFloat("_Timenow", Time.time);
+                materials[0].EnableKeyword("_DISSOLVE_ON");
+                materials[0].DisableKeyword("_DISSOLVE_OFF");
+                materials[1].SetFloat("_Timenow", Time.time);
+                materials[1].EnableKeyword("_DISSOLVE_ON");
+                materials[1].DisableKeyword("_DISSOLVE_OFF");
+                Destroy(cell,2);
+                //cell.GetComponent<MeshRenderer>().material = material;
             }
         }
 

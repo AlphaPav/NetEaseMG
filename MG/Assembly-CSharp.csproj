@@ -190,6 +190,7 @@
      <Compile Include="Assets\Scripts\FGUI\Init.cs" />
      <Compile Include="Assets\Scripts\FGUI\main.cs" />
      <Compile Include="Assets\Scripts\FollowHero.cs" />
+     <Compile Include="Assets\Scripts\G1scripts\smallhero.cs" />
      <Compile Include="Assets\Scripts\G1scripts\trigger1.cs" />
      <Compile Include="Assets\Scripts\G1scripts\trigger2.cs" />
      <Compile Include="Assets\Scripts\G1scripts\trigger2out.cs" />
@@ -280,7 +281,7 @@
  <HintPath>D:/Unity2017/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/Github/NetEaseMG/MG/Assets/Plugins/DOTween.dll</HintPath>
+ <HintPath>D:/UnityProject/MG/Assets/Plugins/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/XieChulin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

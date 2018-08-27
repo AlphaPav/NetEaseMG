@@ -15,7 +15,7 @@ public class trigger2 : MonoBehaviour {
 		cube= GameObject.FindWithTag("01Move2");
 		myhero= GameObject.FindWithTag("Hero");
 		_mat = cube.GetComponent<Renderer>().material;
-		_mat.color = new Color(1, 0, 0, _alpha);
+		_mat.color = new Color(0.9059f, 0.9059f, 0.9059f, _alpha);
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class trigger2 : MonoBehaviour {
 		if (_isFadeIn) {
 			if (_alpha > 0) {
 				_alpha -= Time.deltaTime / 2;
-				_mat.color = new Color(0, 0, 1, _alpha);
+				_mat.color = new Color(0.9059f, 0.9059f, 0.9059f, _alpha);
 			} else {
 				_isFadeIn = false;
 			}

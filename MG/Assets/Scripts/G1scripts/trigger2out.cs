@@ -23,7 +23,7 @@ public class trigger2out : MonoBehaviour {
 			
 			if (_alpha <1) {
 				_alpha += Time.deltaTime / 2;
-				_mat.color = new Color(0, 0, 1, _alpha);
+				_mat.color = new Color(0.9059f, 0.9059f, 0.9059f, _alpha);
 			} else {
 				_isFadeOut = false;
 			}
