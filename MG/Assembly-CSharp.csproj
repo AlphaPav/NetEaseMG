@@ -219,6 +219,8 @@
      <Compile Include="Assets\Scripts\OneJump.cs" />
      <Compile Include="Assets\Scripts\Shaking.cs" />
      <Compile Include="Assets\Scripts\Spring.cs" />
+     <Compile Include="Assets\wow.cs" />
+     <Compile Include="Assets\wow1.cs" />
      <Compile Include="Assets\zoulu.cs" />
      <Compile Include="Assets\zoulu1.cs" />
      <None Include="Assets\Scripts\Shader\01move2shader.shader" />
