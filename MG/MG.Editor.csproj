@@ -307,6 +307,7 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\Scripts\Music\AtmosphereFX\readme.txt.txt" />
     <None Include="Assets\Scripts\Shader\01move2shader.shader" />
     <None Include="Assets\Scripts\Shader\ToonShader.shader" />
   </ItemGroup>

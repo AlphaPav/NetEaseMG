@@ -177,7 +177,7 @@ public class FollowHero : MonoBehaviour {
                 follower.transform.localScale = MyScale;
 
                 //生成孩子的位置
-                Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(1.5f, 2.4f), Random.Range(0.6f, 1.7f));
+				Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(4.5f, 5.5f), Random.Range(0.6f, 1.7f));
 
                 //决定是 1 or -1
                 float flagX = Random.Range(0f, 1f);
@@ -232,8 +232,8 @@ public class FollowHero : MonoBehaviour {
                 Vector3 MyScale = transform.lossyScale * Random.Range(0.3f, 0.4f);
                 follower.transform.localScale = MyScale;
                 
-                //生成孩子的位置
-                Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(1.5f, 2.4f), Random.Range(0.6f, 1.7f));
+				//生成孩子的位置
+				Vector3 MyOffset = new Vector3(Random.Range(0.6f, 1.7f), Random.Range(4.5f, 5.5f), Random.Range(0.6f, 1.7f));
                 
                 //决定是 1 or -1
                 float flagX = Random.Range(0f, 1f);
@@ -254,7 +254,7 @@ public class FollowHero : MonoBehaviour {
         }
 
         transform.localScale = 0.5f * transform.lossyScale;
-        transform.Translate(0, 1.2f, 0);
+        transform.Translate(0.2f, 3.0f, 0);
 
         //删除多余的孩子
         for (int i = Global.HeroBlood; i < Global.MaxHeroBlood; i++)
@@ -296,7 +296,7 @@ public class FollowHero : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)  || Input.GetKeyDown(KeyCode.RightShift))
+		if (Input.GetKeyDown(KeyCode.X))
         {
            
 			if(Global.HeroState == Global.Distributed)

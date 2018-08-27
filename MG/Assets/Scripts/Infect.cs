@@ -50,7 +50,18 @@ public class Infect : MonoBehaviour {
         {
             coll = true;
             cell = collision.gameObject;
-            ui.showTishi("点击'S'感染正常细胞获得生命值\r\n变成大细菌后点击'Shift'进行分裂穿过小障碍叭~");
+			cell.tag = "InfectedCell";
+			cell.GetComponent<CapsuleCollider> ().isTrigger = true;
+			Global.HeroBlood++;
+			Material[] materials = cell.GetComponent<Renderer>().materials;
+			materials[0].SetFloat("_Timenow", Time.time);
+			materials[0].EnableKeyword("_DISSOLVE_ON");
+			materials[0].DisableKeyword("_DISSOLVE_OFF");
+			materials[1].SetFloat("_Timenow", Time.time);
+			materials[1].EnableKeyword("_DISSOLVE_ON");
+			materials[1].DisableKeyword("_DISSOLVE_OFF");
+			Destroy(cell,2);
+            //ui.showTishi("点击'S'感染正常细胞获得生命值\r\n变成大细菌后点击'Shift'进行分裂穿过小障碍叭~");
 
         }
     }
