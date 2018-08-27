@@ -11,6 +11,8 @@ public class RotateAll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.Rotate(pivot.transform.up, 3F * Time.deltaTime, Space.World);
-	}
+		//this.transform.Rotate(pivot.transform.forward, 25* Time.deltaTime, Space.World);
+ transform.RotateAround(pivot.transform.position, new Vector3(0, 0, 1), 30f * Time.deltaTime);
+
+}
 }

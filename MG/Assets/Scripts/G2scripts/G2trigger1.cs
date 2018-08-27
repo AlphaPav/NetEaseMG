@@ -15,7 +15,7 @@ public class G2trigger1 : MonoBehaviour {
 		camera= GameObject.FindWithTag("MainCamera");
 		myhero= GameObject.FindWithTag("Hero");
 		cameraendPos=camera.transform.position;
-		cameraendPos.x = 78.33f;
+		cameraendPos.x = 68f;
 		cameraendPos.y = 4.06f;
 
 	}
@@ -27,7 +27,7 @@ public class G2trigger1 : MonoBehaviour {
 				if (Input.GetKeyDown (KeyCode.S)) {
 					TomoveCamera = true;
 					Global.isCameraFollowHero = false;
-					Vector3 newpos = new Vector3 (78.33f, 4.06f, 0.0f);
+					Vector3 newpos = new Vector3 (68f, 4.06f, 0.0f);
 					myhero.transform.position = newpos;
 					canused = false;
 				}
