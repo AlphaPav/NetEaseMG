@@ -39,6 +39,8 @@ public class CameraFollowHero : MonoBehaviour {
                 randomOffect = new Vector3(Random.Range(-offsetScale, offsetScale), Random.Range(-offsetScale, offsetScale), Random.Range(-offsetScale, offsetScale));
                 randomRotate = new Vector3(Random.Range(-RotateScale, RotateScale), Random.Range(-RotateScale, RotateScale), Random.Range(-RotateScale, RotateScale));
 
+
+
                 transform.Translate(randomOffect);
                 transform.Rotate(randomRotate);
             }

@@ -17,6 +17,7 @@ public class dpt : MonoBehaviour {
 		if (other.tag == "Hero")
 		{
 			mu1.Play();
+			//gameobject.Destroy ();
 		}
 	}
 }
