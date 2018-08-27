@@ -286,6 +286,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\chuansong.cs" />
+    <Compile Include="Assets\dpt.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Core\BlendMode.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Core\CaptureCamera.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Core\Container.cs" />
@@ -419,6 +421,7 @@
     <Compile Include="Assets\FairyGUI\Scripts\Utils\XMLUtils.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Utils\ZipReader.cs" />
     <Compile Include="Assets\rotation1.cs" />
+    <Compile Include="Assets\Scenes\UpdataGI.cs" />
     <Compile Include="Assets\Scripts\CameraFollowHero.cs" />
     <Compile Include="Assets\Scripts\ChildDying.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
@@ -443,9 +446,16 @@
     <Compile Include="Assets\Scripts\HeroHurt.cs" />
     <Compile Include="Assets\Scripts\HeroQEMode.cs" />
     <Compile Include="Assets\Scripts\Infect.cs" />
+    <Compile Include="Assets\Scripts\Music\AtmosphereFX\scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Music\AtmosphereFX\scripts\Cleanup.cs" />
+    <Compile Include="Assets\Scripts\Music\AtmosphereFX\scripts\Lightning.cs" />
+    <Compile Include="Assets\Scripts\Music\AtmosphereFX\scripts\PlayEffect.cs" />
+    <Compile Include="Assets\Scripts\Music\AtmosphereFX\scripts\Visual.cs" />
     <Compile Include="Assets\Scripts\OneJump.cs" />
     <Compile Include="Assets\Scripts\Shaking.cs" />
     <Compile Include="Assets\Scripts\Spring.cs" />
+    <Compile Include="Assets\zoulu.cs" />
+    <Compile Include="Assets\zoulu1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FairyGUI\ReadMe - 2.3.0.txt" />
@@ -454,6 +464,7 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\Scripts\Music\AtmosphereFX\readme.txt.txt" />
     <None Include="Assets\Scripts\Shader\01move2shader.shader" />
     <None Include="Assets\Scripts\Shader\ToonShader.shader" />
   </ItemGroup>
