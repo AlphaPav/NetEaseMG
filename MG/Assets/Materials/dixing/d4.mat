@@ -78,7 +78,7 @@ Material:
     - _OcclusionStrength: 1
     - _Outline: 0
     - _Parallax: 0.02
-    - _RimEffect: 0.705
+    - _RimEffect: 1
     - _RimPower: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -86,7 +86,7 @@ Material:
     - _Steps: 2.7
     - _Timenow: 0
     - _ToonEffect: 1
-    - _ToonRimStep: 2.98
+    - _ToonRimStep: 3.24
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
