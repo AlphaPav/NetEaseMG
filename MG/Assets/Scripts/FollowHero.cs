@@ -53,14 +53,12 @@ public class FollowHero : MonoBehaviour {
 
     //延时10帧
     const int Pause = 10;
-    int Delay = Pause;
 
     //保存每个物体的接下来的运动
     public Vector3[][] offset;
 
     //Shift 持续时间
     const int SetShiftPause = 40;
-    private int PauseTime = 0;
 
     //Jump Code
     float force = 250;
@@ -89,7 +87,6 @@ public class FollowHero : MonoBehaviour {
         lastPos = transform.position;
 
         //设置全局变量
-        Global.HeroBlood = 2;
         Global.HeroType = Global.A;
     }
     void Update()

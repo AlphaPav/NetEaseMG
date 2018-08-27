@@ -30,25 +30,18 @@ public class smallhero : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			JumpNum++;
-			if (JumpNum > 2) return;
+            JumpNum++;
+			if (JumpNum > 1) return;
 			if (JumpNum == 1)
 			{
 				rb.AddForce(Vector3.up * force);
-			}
-			else if (JumpNum == 2)
-			{
-				rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-				rb.AddForce(Vector3.up * force);
-	
 			}
 		}
 	}
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.collider.tag == "WalkableRood")//碰撞的是quad  
+		if (collision.collider.tag.Equals("WalkableRood"))//碰撞的是quad  
 		{
-
 			JumpNum = 0;
 		}
 	}
