@@ -89,7 +89,7 @@ public class FollowHero : MonoBehaviour {
         lastPos = transform.position;
 
         //设置全局变量
-        Global.HeroBlood = 8;
+        Global.HeroBlood = 2;
         Global.HeroType = Global.A;
     }
     void Update()

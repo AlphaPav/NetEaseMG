@@ -18,6 +18,7 @@ public class Infect : MonoBehaviour {
             if (coll)
             {
                 cell.tag = "InfectedCell";
+                Global.HeroBlood++;
                 Material material = new Material(Shader.Find("Standard"));
                 material.color = Color.black;
                 cell.GetComponent<MeshRenderer>().material = material;
