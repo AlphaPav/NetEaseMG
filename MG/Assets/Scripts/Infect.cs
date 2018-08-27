@@ -5,6 +5,7 @@ using UnityEngine;
 public class Infect : MonoBehaviour {
     private bool coll = false;
     private GameObject cell = null;
+    public main ui;
     
     // Use this for initialization
     void Start() {
@@ -49,6 +50,8 @@ public class Infect : MonoBehaviour {
         {
             coll = true;
             cell = collision.gameObject;
+            ui.showTishi("点击'S'感染正常细胞获得生命值\r\n变成大细菌后点击'Shift'进行分裂穿过小障碍叭~");
+
         }
     }
 

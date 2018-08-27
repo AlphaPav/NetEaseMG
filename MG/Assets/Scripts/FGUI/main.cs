@@ -15,6 +15,10 @@ public class main : MonoBehaviour {
     private float endTime = 6.0f;
     public bool penti = false;
 
+    private GTextField tsText;
+    private float currentTimeTS;
+    public bool ts = false; 
+
 	// Use this for initialization
 	void Start () {
 		mainUI = GetComponent<UIPanel>().ui;
@@ -33,8 +37,11 @@ public class main : MonoBehaviour {
         Abar.value = 0;
         Bbar.value = 0;
         Cbar.value = 0;
+
         mainUI.GetChild("n7").visible = false;
-        currentTime = 100.0f;
+        mainUI.GetChild("n8").visible = false;
+        tsText = mainUI.GetChild("n9").asTextField;
+        tsText.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -44,10 +51,17 @@ public class main : MonoBehaviour {
         Bbar.TweenValue(Global.HeroResistanceB, 1.0f);
         Cbar.TweenValue(Global.HeroResistanceC, 1.0f);
         currentTime += 0.1f;
+        currentTimeTS += 0.1f;
         if(penti && currentTime > endTime)
         {
             mainUI.GetChild("n7").visible = false;
             penti = false;
+        }
+        if(ts && currentTimeTS > endTime)
+        {
+            mainUI.GetChild("n8").visible = false;
+            tsText.visible = false;
+            ts = false;
         }
 	}
 
@@ -56,5 +70,14 @@ public class main : MonoBehaviour {
         mainUI.GetChild("n7").visible = true;
         currentTime = 0.0f;
         penti = true;
+    }
+
+    public void showTishi(string str)
+    {
+        tsText.text = str;
+        tsText.visible = true;
+        mainUI.GetChild("n8").visible = true;
+        currentTimeTS = 0.0f;
+        ts = true;
     }
 }
